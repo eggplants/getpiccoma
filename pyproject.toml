@@ -9,7 +9,11 @@ readme = "README.md"
 keywords = [
   "cli",
   "downloader",
+  "japanese",
   "manga",
+  "manga-downloader",
+  "piccoma",
+  "scraping",
 ]
 license = { text = "MIT" }
 authors = [ { name = "eggplants", email = "w10776e8w@yahoo.co.jp" } ]
@@ -17,22 +21,33 @@ requires-python = ">=3.11"
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Environment :: Console",
-  "Intended Audience :: Developers",
+  "Intended Audience :: End Users/Desktop",
   "License :: OSI Approved :: MIT License",
+  "Natural Language :: Japanese",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Multimedia :: Graphics",
+  "Topic :: Utilities",
   "Typing :: Typed",
 ]
 dynamic = [ "version" ]
-dependencies = []
+dependencies = [
+  "beautifulsoup4>=4.12",
+  "pathvalidate>=3.2",
+  "pillow>=10.4",
+  "requests>=2.32",
+  "rich>=13.7",
+]
 urls.Documentation = "https://eggplants.github.io/getpiccoma/"
 urls.Issues = "https://github.com/eggplants/getpiccoma/issues"
 urls.Repository = "https://github.com/eggplants/getpiccoma"
 scripts.getpiccoma = "getpiccoma.cli:main"
+scripts.pget = "getpiccoma.cli:main"
 
 [dependency-groups]
 dev = [
@@ -40,6 +55,8 @@ dev = [
   "pyproject-fmt>=2.11.1",
   "pytest>=9.0.2",
   "pytest-cov>=7",
+  "pytest-mock>=3.14",
+  "types-requests>=2.32",
 ]
 docs = [
   "pdoc>=16",
@@ -82,6 +99,9 @@ lint.per-file-ignores."tests/**" = [
   "PLR2004", # Magic value used in comparison
   "S101",    # Use of assert detected
 ]
+# Piccoma separates the parts of a page title with a fullwidth bar, so the
+# parser and its fixtures have to spell it the way the site does.
+lint.allowed-confusables = [ "｜" ]
 lint.pydocstyle.convention = "google"
 
 [tool.uv-dynamic-versioning]
