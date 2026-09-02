@@ -8,9 +8,7 @@
   <https://github.com/eggplants/getpiccoma/actions/workflows/ci.yml/badge.svg>
   )](
   <https://github.com/eggplants/getpiccoma/actions/workflows/ci.yml>
-)
-
-[![ghcr size](
+) [![ghcr size](
   <https://ghcr-badge.egpl.dev/eggplants/getpiccoma/size>
 )](
   <https://github.com/eggplants/getpiccoma/pkgs/container/getpiccoma>
@@ -19,8 +17,7 @@
 Retrieve and save images from manga distribution sites using
 [Piccoma](https://piccoma.com).
 
-Pages are served sliced into a grid of 50px tiles and shuffled; getpiccoma
-replays the viewer's own shuffle to put them back together before saving.
+_Note: Redistribution of downloaded image data is prohibited. Please keep it to private use._
 
 ## Valid URL Formats
 
@@ -29,9 +26,6 @@ replays the viewer's own shuffle to put them back together before saving.
 - `piccoma.com/web/product/<product-id>/episodes` -- the whole series, from its
   first entry
   - e.g. <https://piccoma.com/web/product/8195/episodes>
-
-Only Piccoma Japan is supported. Piccoma France (`piccoma.com/fr/`) runs a
-different site and is not handled.
 
 ## Installation
 
