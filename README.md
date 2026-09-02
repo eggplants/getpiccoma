@@ -57,8 +57,8 @@ docker run --rm -v "$PWD:/work" -w /work \
 ```shellsession
 $ pget https://piccoma.com/web/viewer/8195/1185884
 get: https://piccoma.com/web/viewer/8195/1185884
-  Downloading... ━━━━━━━━━━━━ 100% ( 14/14 pages ) remain: 0:00:00 spent: 0:00:09
-saved: <series>/<episode>
+  Downloading... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% ( 14/14 pages ) remain: 0:00:00 spent: 0:00:03
+saved: ひげを剃る。そして女子高生を拾う。(しめさば ぶーた 足立いまる)/第1話 失恋と女子高生 (1)
 done.
 ```
 
